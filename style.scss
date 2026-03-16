@@ -1,0 +1,277 @@
+$border-radius-button: 15px;
+$cyan-200: #90E4F9;
+$cyan-300: #8FE3F9;
+$cyan-600: #4D96A9;
+$slate-300: #D1D1DF;
+$slate-600: #87879D;
+$slate-900: #28283D;
+$purple-300: #D9B8FF;
+$purple-600: #855FB1;
+$white: #FAFAFA;
+
+$footer-background-color: hsl(195, 37%, 48%, 0.65);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: "Red Hat Display", sans-serif;
+    background-color: $white;
+    font-size: 16px;
+    max-width: 1600px;
+    gap: 10rem;
+    color: $slate-600;
+}
+
+h2,
+h3,
+p {
+    margin: unset;
+}
+
+button {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
+    width: fit-content;
+    height: 55px;
+    border: none;
+    border-radius: 30px;
+    padding: 0 3rem;
+    color: $white;
+    font-size: 1.2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin-block-start: 3rem;
+    align-items: center;
+    width: 85%;
+
+    img {
+        align-self: center;
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
+
+    &__image {
+        max-width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            line-height: 4rem;
+            font-size: 4rem;
+            font-weight: 800;
+            text-align: center;
+            color: $slate-900;
+        }
+
+        p {
+            margin-block-end: 3rem;
+            text-align: center;
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+
+            &__download {
+                background-color: $cyan-600;
+
+                span {
+                    color: $cyan-200;
+                }
+
+                &:hover {
+                    background-color: $cyan-300;
+
+                    span {
+                        color: $cyan-600;
+                    }
+                }
+            }
+
+            &__what-is-it {
+                background-color: $purple-600;
+
+                &:hover {
+                    background-color: $purple-300;
+                }
+            }
+        }
+    }
+
+}
+
+.features {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-block-start: 5rem;
+    gap: 2rem;
+
+    h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $cyan-600;
+        font-weight: 800;
+    }
+
+    h3 {
+        width: 33rem;
+        font-size: 3rem;
+        color: $slate-900;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    p {
+        width: 50%;
+        line-height: 1.3rem;
+        text-align: center;
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        width: 55vw;
+        gap: 2rem;
+        justify-content: center;
+        margin-block-end: 2rem;
+
+        & img {
+            border-radius: 0.5rem;
+            max-width: 100%;
+            flex: 0 1 25%;
+            width: 25%;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient($footer-background-color, $footer-background-color), url(assets/desktop/image-footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem;
+    color: $white;
+    gap: 2rem;
+
+    h2 {
+        width: 15rem;
+        font-size: 1.85rem;
+        font-weight: 800;
+    }
+
+    p {
+        width: 18rem;
+        font-weight: 500;
+        line-height: 1.3rem;
+    }
+
+    button {
+        background-color: $purple-600;
+
+        span {
+            color: $purple-300;
+        }
+
+        &:hover {
+            background-color: $purple-300;
+
+            span {
+                color: $purple-600;
+            }
+        }
+    }
+
+    .number {
+        color: $slate-600;
+    }
+
+}
+
+@media (max-width: 1270px) {
+    .hero {
+        grid-template: 1fr 1fr/1fr 1fr;
+
+        &__content {
+            grid-column: 1/3;
+            grid-row: 2;
+        }
+    }
+
+    .features__images img {
+        width: 35%;
+    }
+
+    .img-right {
+        grid-column: 2/3;
+        grid-row: 1;
+    }
+
+    footer {
+        flex-direction: row;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h2,
+        p {
+            flex: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__content__buttons {
+        flex-wrap: wrap;
+
+        button {
+            width: 80%;
+        }
+    }
+
+    .features__images {
+        flex-wrap: wrap;
+        width: 100%;
+
+        img {
+            width: 40%;
+        }
+    }
+
+
+}
