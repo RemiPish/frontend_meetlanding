@@ -40,7 +40,6 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 - CSS BEM (Block Element Modifier) structure attempt
 - box-sizing: border-box
 - Usage of SCSS
-- Mobile-first styling
 - Grid usage for cards
 
 
