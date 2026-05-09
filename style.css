@@ -143,6 +143,16 @@ header img {
   width: 25%;
 }
 
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  flex: 1 1 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 footer {
   display: flex;
   flex-flow: row wrap;

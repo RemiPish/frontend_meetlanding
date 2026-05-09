@@ -8,7 +8,7 @@ $slate-900: #28283D;
 $purple-300: #D9B8FF;
 $purple-600: #855FB1;
 $white: #FAFAFA;
-
+$footer-a: hsl(228, 45%, 44%);
 $footer-background-color: hsl(195, 37%, 48%, 0.65);
 
 *,
@@ -173,6 +173,16 @@ header {
             width: 25%;
         }
     }
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    flex: 1 1 100%;
+}
+
+.attribution a {
+    color: $footer-a;
 }
 
 footer {
